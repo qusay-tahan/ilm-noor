@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>العلم نور</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: #f8f7f4;
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0ddd6;
+  }
+
+  .academy-name {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+  }
+
+  .academy-name span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #1D9E75;
+    border-radius: 50%;
+    margin: 0 6px;
+    vertical-align: middle;
+    margin-bottom: 6px;
+  }
+
+  /* Red notice box */
+  .notice-box {
+    background: #fff5f5;
+    border: 1.5px solid #f7c1c1;
+    border-radius: 14px;
+    padding: 1.25rem 1.75rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .notice-box .line1 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #991b1b;
+    line-height: 1.7;
+  }
+
+  .notice-box .line2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #7f1d1d;
+    margin-top: 6px;
+  }
+
+  /* Section header */
+  .section-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .summer-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #b91c1c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  /* Cards grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #e8e5de;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: box-shadow 0.2s;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .card.featured {
+    border: 2px solid #1D9E75;
+  }
+
+  .popular-badge {
+    background: #1D9E75;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    align-self: flex-end;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: right;
+  }
+
+  .price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1D9E75;
+    text-align: right;
+    line-height: 1;
+  }
+
+  .price sub {
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    vertical-align: baseline;
+  }
+
+  .sep {
+    height: 1px;
+    background: #f0ede6;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .meta-row strong {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
+  .meta-icon {
+    font-size: 18px;
+  }
+
+  .subjects-label {
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+    margin-bottom: 4px;
+  }
+
+  .subjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+
+  .pill {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 30px;
+    background: #f5f3ef;
+    color: #333;
+    border: 1px solid #e8e5de;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    .academy-name { font-size: 30px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="academy-name">العلم<span></span>نور</div>
+  </div>
+
+  <div class="notice-box">
+    <div class="line1">نحن لا نقدم مجرد درس، بل نقدم تجربة تعليمية تفاعلية حقيقية.</div>
+    <div class="line2">تم تصميم مجموعاتنا لتكون ( من 3 إلى 4 طلاب فقط في المجموعة الواحدة! )</div>
+  </div>
+
+  <div class="section-header">
+    <div class="summer-label">🌞 الكورسات الصيفية</div>
+    <div class="section-title">اختر الباقة المناسبة لك</div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card featured">
+      <div class="popular-badge">الأكثر شمولاً ⭐</div>
+      <div class="card-title">الباقة الكبرى</div>
+      <div class="price">2300 ₺ <sub>/ شهر</sub></div>
+      <div class="sep"></div>
+      <div class="meta">
+        <div class="meta-row"><strong>30 ساعة</strong> / شهرياً <span class="meta-icon">🕐</span></div>
+        <div class="meta-row"><strong>3 – 5 طلاب</strong> في المجموعة <span class="meta-icon">👥</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="subjects-label">المواد الدراسية</div>
+      <div class="subjects">
+        <span class="pill">رياضيات</span>
+        <span class="pill">عربي</span>
+        <span class="pill">إنجليزي</span>
+        <span class="pill">تركي</span>
+        <span class="pill">برمجة</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">الباقة الوسطى</div>
+      <div class="price">1850 ₺ <sub>/ شهر</sub></div>
+      <div class="sep"></div>
+      <div class="meta">
+        <div class="meta-row"><strong>24 ساعة</strong> / شهرياً <span class="meta-icon">🕐</span></div>
+        <div class="meta-row"><strong>3 – 5 طلاب</strong> في المجموعة <span class="meta-icon">👥</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="subjects-label">المواد الدراسية</div>
+      <div class="subjects">
+        <span class="pill">عربي</span>
+        <span class="pill">إنجليزي</span>
+        <span class="pill">رياضيات</span>
+        <span class="pill">تركي</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">كورس اللغة العربية</div>
+      <div class="price">750 ₺ <sub>/ شهر</sub></div>
+      <div class="sep"></div>
+      <div class="meta">
+        <div class="meta-row"><strong>12 ساعة</strong> / شهرياً <span class="meta-icon">🕐</span></div>
+        <div class="meta-row"><strong>3 – 5 طلاب</strong> في المجموعة <span class="meta-icon">👥</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="subjects-label">المادة الدراسية</div>
+      <div class="subjects">
+        <span class="pill">اللغة العربية</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">العلم نور &copy; 2025</div>
+
+</div>
+</body>
+</html>
